@@ -45,6 +45,7 @@ SemanticEdit uses the following
 - [Meteor JS](https://meteor.com/) (Still Not Really! But Have Plans to Integrate User Login & Persistance)
 - [WebPack Build System](https://webpack.github.io/)
 - [Ace Editor](https://ace.c9.io/#nav=about) & [react-ace](https://www.npmjs.com/package/react-ace)
+- [React + WebPack+ FlowRouter Kickstarter Pack](https://github.com/thereactivestack/kickstart-flowrouter)
 
 # That's It?
 Source will be available soon and more features too!
