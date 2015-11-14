@@ -1,10 +1,7 @@
 ![Logo](https://raw.githubusercontent.com/Raathigesh/SemanticEdit/master/assets/SemanticEditLogo.png)
 
-# SemanticEdit
+# SemanticEdit - http://semanticedit.meteor.com/
 Real-time Preview Enabled [Semantic UI](http://semantic-ui.com/) Composer
-
-## Demo
-Initial Hacky Demo - http://semanticedit.meteor.com/
 
 ## How?
 Copy the following Semantic-UI markup to [Semantic Edit](http://semanticedit.meteor.com/) editor.
