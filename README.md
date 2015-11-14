@@ -1,3 +1,5 @@
+![Logo](https://raw.githubusercontent.com/Raathigesh/SemanticEdit/master/assets/SemanticEditLogo.png)
+
 # SemanticEdit
 Real-time Preview Enabled [Semantic UI](http://semantic-ui.com/) Composer
 
