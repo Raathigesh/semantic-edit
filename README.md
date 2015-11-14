@@ -1,5 +1,5 @@
 # SemanticEdit
-Real-time Preview Enabled Semantic UI Composer
+Real-time Preview Enabled [Semantic UI](http://semantic-ui.com/) Composer
 
 Initial Hacky Demo - http://semanticedit.meteor.com/
 
@@ -27,5 +27,6 @@ Copy the following Semantic-UI markup to [Semantic Edit](http://semanticedit.met
   </div>
 </div>
 ```
+You could copy and paste any [Semantic UI components](http://semantic-ui.com/elements/button.html).
 
 Source will be available soon and more features too!
