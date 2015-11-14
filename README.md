@@ -50,4 +50,4 @@ SemanticEdit uses the following
 - [React + WebPack+ FlowRouter Kickstarter Pack](https://github.com/thereactivestack/kickstart-flowrouter)
 
 ## That's It?
-I'm hoping to add features as I move along. Got a feature suggestion? Please create a new issues. 
+I'm hoping to add features as I move along. Got a feature suggestion? Would love to hear about it. Please create a new issues. 
