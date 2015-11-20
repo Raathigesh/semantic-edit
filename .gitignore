@@ -65,3 +65,5 @@ dist/
 *.tmp
 
 .meteor/local
+
+.DS_Store
