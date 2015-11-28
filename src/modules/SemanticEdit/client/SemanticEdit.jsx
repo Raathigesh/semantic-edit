@@ -1,6 +1,6 @@
 import { Component, PropTypes } from 'react';
 
-export default class TodoApp extends Component {
+export default class SemanticEdit extends Component {
   static propTypes = {
     children: PropTypes.any.isRequired
   }

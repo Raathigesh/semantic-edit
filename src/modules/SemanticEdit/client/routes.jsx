@@ -1,10 +1,10 @@
-import TodoApp from './TodoApp';
-import TodoMain from './TodoMain';
+import SemanticEdit from './SemanticEdit';
+import SemanticEditMain from './SemanticEditMain';
 
 FlowRouter.route('/', {
   action() {
-    ReactLayout.render(TodoApp, {
-      children: <TodoMain />
+    ReactLayout.render(SemanticEdit, {
+      children: <SemanticEditMain />
     });
   }
 });

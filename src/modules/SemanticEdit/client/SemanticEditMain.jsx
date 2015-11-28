@@ -10,7 +10,9 @@ import brace from 'brace';
 import html from 'brace/mode/html'
 import monokai from 'brace/theme/tomorrow'
 
-export default class TodoMain extends Component {
+var pretty = require('pretty');
+
+export default class SemanticEditMain extends Component {
 
 	state = {
 		html: "",
@@ -67,10 +69,20 @@ export default class TodoMain extends Component {
 		});
 	}
 
+	beautify = () => {
+		let prettified = pretty(this.state.html);
+		this.setState({
+			html: prettified,
+			jsx: this.state.jsx,
+			isJsxMode: this.state.isJsxMode,
+			editorHeight: this.state.editorHeight
+		});
+	}
+
 	render () {
 		return (
 			<body>
-				<Header isJsxMode={this.state.isJsxMode} reactOnClick={this.toggleMarkup}/>
+				<Header isJsxMode={this.state.isJsxMode} reactOnClick={this.toggleMarkup} onBeautify={this.beautify}/>
 				<div className="ui two column doubling grid">
 					<div className="column">
 						<Ace
