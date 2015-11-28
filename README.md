@@ -51,3 +51,6 @@ SemanticEdit uses the following
 
 ## That's It?
 I'm hoping to add features as I move along. Got a feature suggestion? Would love to hear about it. Please create a new issues. 
+
+## stay Updated
+- Follow us [@SemanticEdit](https://twitter.com/SemanticEdit)
