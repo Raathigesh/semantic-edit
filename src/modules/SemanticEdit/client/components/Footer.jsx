@@ -6,7 +6,7 @@ export default class Footer extends Component {
 			<div className="ui inverted vertical footer segment">
 				<div className="ui center aligned container">
 					<div className="ui horizontal inverted small divided link list">
-						Made with JavaScript and love by<a className="item" href="https://twitter.com/Raathigeshan">@Raathigesh</a>
+						SemanticEdit v1.0 | Made with JavaScript and love by<a className="item" href="https://twitter.com/Raathigeshan">@Raathigesh</a>
 					</div>
 				</div>
 			</div>
