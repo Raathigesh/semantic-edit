@@ -10,7 +10,7 @@ import brace from 'brace';
 import html from 'brace/mode/html'
 import monokai from 'brace/theme/tomorrow'
 
-var pretty = require('pretty');
+import pretty from 'pretty';
 
 export default class SemanticEditMain extends Component {
 
@@ -70,10 +70,11 @@ export default class SemanticEditMain extends Component {
 	}
 
 	beautify = () => {
-		let prettified = pretty(this.state.html);
+		let prettyHtml = pretty(this.state.html);
+		let prettyJsx = pretty(this.state.jsx);
 		this.setState({
-			html: prettified,
-			jsx: this.state.jsx,
+			html: prettyHtml,
+			jsx: prettyJsx,
 			isJsxMode: this.state.isJsxMode,
 			editorHeight: this.state.editorHeight
 		});
