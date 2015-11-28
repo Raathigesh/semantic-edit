@@ -35,6 +35,9 @@ You could copy and paste any [Semantic UI components](http://semantic-ui.com/ele
 build web interfaces. But I felt like it would be nicer if we can compose bunch of elements and see in realtime how they
 fit together. That's why Semantic Edit.
 
+## Features
+- Beautifier
+
 ## What's Under the Hood?
 JavaScript! 
 
