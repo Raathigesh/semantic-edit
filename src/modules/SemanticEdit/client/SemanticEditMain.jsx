@@ -24,6 +24,15 @@ export default class SemanticEditMain extends Component {
 	componentDidMount  = () => {
 		window.addEventListener("resize", this.resize);
 		this.resize();
+
+		var initialHtml = decodeURIComponent(window.location.href.split('/#src=')[1] || '');
+
+		this.setState({
+			html: initialHtml,
+			jsx: this.state.jsx,
+			isJsxMode: this.state.isJsxMode,
+			editorHeight: this.state.editorHeight
+		}, this.resize);
 	}
 
 	resize = () => {
@@ -72,6 +81,7 @@ export default class SemanticEditMain extends Component {
 	beautify = () => {
 		let prettyHtml = pretty(this.state.html);
 		let prettyJsx = pretty(this.state.jsx);
+
 		this.setState({
 			html: prettyHtml,
 			jsx: prettyJsx,
@@ -80,10 +90,20 @@ export default class SemanticEditMain extends Component {
 		});
 	}
 
+	share = () => {
+		this.refs.modal.show();
+	}
+
+	encodeToShare = () => {
+		var encodedSource = encodeURIComponent(this.state.html);
+		var trimmedLocation = window.location.href.replace(/#$/, '');
+		return trimmedLocation + '#src=' + encodedSource;
+	}
+
 	render () {
 		return (
 			<body>
-				<Header isJsxMode={this.state.isJsxMode} reactOnClick={this.toggleMarkup} onBeautify={this.beautify}/>
+				<Header isJsxMode={this.state.isJsxMode} reactOnClick={this.toggleMarkup} onBeautify={this.beautify} onShare={this.share}/>
 				<div className="ui two column doubling grid">
 					<div className="column">
 						<Ace
@@ -100,7 +120,9 @@ export default class SemanticEditMain extends Component {
 						<div dangerouslySetInnerHTML={this.createMarkup()}/>
 					</div>
 				</div>
-				<Footer/>
+				<Footer>
+					<Modal ref="modal" html={this.encodeToShare()} />
+				</Footer>
 			</body>
 		);
 	}

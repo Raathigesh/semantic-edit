@@ -9,24 +9,25 @@ import monokai from 'brace/theme/tomorrow'
 
 class Modal extends React.Component {
 
-static propTypes = {
-	html : React.PropTypes.string
-}
+	static propTypes = {
+		html: React.PropTypes.string
+	}
 
- show = () => {
-	 $('.ui.modal').modal('show');
- }
+	show = () => {
+		$('.ui.modal').modal('show');
+	}
 
-	render () {
+	render () {  
+
 		return (
 			<div className="ui modal">
 				<i className="close icon"></i>
 				<div className="header">
-					React Compliant JSX
+					Share Away
 				</div>
 				<div className="image content">
 					<div className="description">
-						{this.props.html}
+						<p>{this.props.html}</p>
 					</div>
 				</div>
 				<div className="actions">
