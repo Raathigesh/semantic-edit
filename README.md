@@ -1,3 +1,5 @@
+# SemanticEdit is currently not functional as the meteor free hosting service is no longer available. Will be back online shortly!
+
 ![Logo](https://raw.githubusercontent.com/Raathigesh/SemanticEdit/master/assets/SemanticEditLogo.png)
 
 # SemanticEdit - http://semanticedit.meteor.com/
