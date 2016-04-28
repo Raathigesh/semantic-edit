@@ -1,10 +1,10 @@
 ![Logo](https://raw.githubusercontent.com/Raathigesh/SemanticEdit/master/assets/SemanticEditLogo.png)
 
-# SemanticEdit - http://semanticedit.meteor.com/
-Real-time Preview Enabled [Semantic UI](http://semantic-ui.com/) Composer
+# SemanticEdit - http://raathigesh.com/semantic/
+Real-time Preview Enabled [Semantic UI](http://raathigesh.com/semantic/) Composer
 
 ## How?
-Copy the following Semantic-UI markup to [Semantic Edit](http://semanticedit.meteor.com/) editor.
+Copy the following Semantic-UI markup to [Semantic Edit](http://raathigesh.com/semantic/) editor.
 
 ```html
 <div class="ui card">
