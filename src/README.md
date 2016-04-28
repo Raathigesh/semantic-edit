@@ -1,53 +1,46 @@
-# kickstart-flowrouter by thereactivestack
+# react-webpack-babel
+Simple React Webpack Babel Starter Kit
 
-Kickstart a project with FlowRouter fast!
 
-If you would like a simpler kickstart, see the [kickstart-simple project](https://github.com/thereactivestack/kickstart-simple).
+This is a simple [React](https://facebook.github.io/react/), [Webpack](http://webpack.github.io/) and [Babel](https://babeljs.io/) application with nothing else in it.
 
-If you would like a more sophisticated kickstart with code splitting, see the [kickstart-hugeapp project](https://github.com/thereactivestack/kickstart-hugeapp).
+### What's in it?
 
-Clone this project to start a FlowRouter project using Meteor, React.js and Webpack.
+Just a simple [index.jsx](./index.jsx), [webpack.config.js](./webpack.config.js) and [index.html](./public/index.html) file.
 
-1. `git clone https://github.com/thereactivestack/kickstart-flowrouter.git`
-1. `cd kickstart-simple`
-1. `meteor`
+### To run
 
-## The stack & features
-- Include the simple todo app example
-- ES6 modules
-- Meteor
-- React.js
-- FlowRouter / ReactLayout
-- Webpack (bundle your app / assets and send them to Meteor)
-- Hot-reload with no page refresh in development mode
-- Optimize your code in production mode
-- Give access to NPM by using packages.json
+* You'll need to have [git](https://git-scm.com/) and [node](https://nodejs.org/en/) installed in your system.
+* Fork and clone the project:
 
-# Production
-You can use meteor run, meteor build, mup or anything working with Meteor.
+```
+> $ git clone https://github.com/alicoding/react-webpack-babel.git
+```
 
-## Run in production mode
-`meteor run --production`
+Then install the dependencies:
 
-## Build for production
-`meteor build .`
+```
+> $ npm install
+```
 
-## Deploy with Meteor-up
-`mup deploy`
+Install webpack and the development server:
 
-## Cordova
-You need to do those 3 steps to make it works with iOS or Android:
+```
+> $ npm i webpack-dev-server webpack -g
+```
 
-1. Add the platform to your Meteor project
+You can simply run webpack build using this command: 
 
-    ```javascript
-    meteor add-platform ios
-    meteor add-platform android
-    ```
-1. Allow access to your dev server in your `/mobile-config.js` file:
+```
+> $ npm run build
+```
 
-    ```javascript
-    App.accessRule('http://192.168.1.100:3500/*');
-    ```
+If you want to run with webpack-dev-server simply run this command: 
 
-1. Replace localhost by your local ip address in `/entry/webpack.conf.js`.
+```
+> $ npm run dev
+```
+
+Open the web browser to `http://localhost:8080/`
+
+Please contribute to the project if you think this can be done better in anyway even for this README :)
