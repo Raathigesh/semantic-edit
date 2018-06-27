@@ -5,10 +5,6 @@ import Footer from './components/Footer.jsx'
 import Modal from './components/Modal.jsx';
 
 import Ace from 'react-ace';
-import brace from 'brace';
-import html from 'brace/mode/html'
-import monokai from 'brace/theme/tomorrow'
-
 import pretty from 'pretty';
 
 export default class SemanticEditMain extends Component {
