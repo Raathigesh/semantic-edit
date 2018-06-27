@@ -13,7 +13,7 @@ export default class SemanticEdit extends Component {
 }
 
 SemanticEdit.propTypes = {
-	children: PropTypes.any.isRequired
+  children: PropTypes.any.isRequired
 }
 
-ReactDOM.render(<SemanticEdit/>, document.querySelector("#myApp"));
+ReactDOM.render(<SemanticEdit />, document.querySelector("#myApp"));

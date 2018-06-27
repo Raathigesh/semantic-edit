@@ -47,7 +47,7 @@ export default class SemanticEditMain extends Component {
 		window.removeEventListener("beforeunload", this.alertExistHandler)
 	}
 
-	alertExistHandler(event){
+	alertExistHandler(event) {
 		event.preventDefault();
 		return event.returnValue = 'Are you sure you want to close?'; // currently newer version of chrome and other browsers deosn't support customized string so returning a string or empty string won't be of much impact
 	}
