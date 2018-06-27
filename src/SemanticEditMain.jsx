@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
@@ -33,7 +33,9 @@ export default class SemanticEditMain extends Component {
 
 	componentDidMount() {
 		window.addEventListener("resize", this.resize);
+		window.addEventListener("beforeunload", this.alertExistHandler);
 		this.resize();
+
 
 		var initialHtml = decodeURIComponent(window.location.href.split('/#src=')[1] || '');
 
@@ -43,6 +45,15 @@ export default class SemanticEditMain extends Component {
 			isJsxMode: this.state.isJsxMode,
 			editorHeight: this.state.editorHeight
 		}, this.resize);
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener("beforeunload", this.alertExistHandler)
+	}
+
+	alertExistHandler(event){
+		event.preventDefault();
+		return event.returnValue = 'Are you sure you want to close?'; // currently newer version of chrome and other browsers deosn't support customized string so returning a string or empty string won't be of much impact
 	}
 
 	resize() {
@@ -56,17 +67,17 @@ export default class SemanticEditMain extends Component {
 		});
 	}
 
-	createMarkup (){
-		return {__html: this.state.html};
+	createMarkup() {
+		return { __html: this.state.html };
 	}
 
 	getViewPortHeight() {
 		return window.innerHeight - 88;
 	}
 
-	onChange(newValue)  {
-		if(this.state.isJsxMode) {
-				newValue = newValue.replace(/className=/g, 'class=');
+	onChange(newValue) {
+		if (this.state.isJsxMode) {
+			newValue = newValue.replace(/className=/g, 'class=');
 		}
 
 		var jsx = newValue.replace(/class=/g, 'className=');
@@ -88,7 +99,7 @@ export default class SemanticEditMain extends Component {
 		});
 	}
 
-	beautify()  {
+	beautify() {
 		let prettyHtml = pretty(this.state.html);
 		let prettyJsx = pretty(this.state.jsx);
 
@@ -100,7 +111,7 @@ export default class SemanticEditMain extends Component {
 		});
 	}
 
-	share()  {
+	share() {
 		this.refs.modal.show();
 	}
 
@@ -110,10 +121,10 @@ export default class SemanticEditMain extends Component {
 		return trimmedLocation + '#src=' + encodedSource;
 	}
 
-	render () {
+	render() {
 		return (
 			<body>
-				<Header isJsxMode={this.state.isJsxMode} reactOnClick={this.toggleMarkup} onBeautify={this.beautify} onShare={this.share}/>
+				<Header isJsxMode={this.state.isJsxMode} reactOnClick={this.toggleMarkup} onBeautify={this.beautify} onShare={this.share} />
 				<div className="ui two column doubling grid">
 					<div className="column">
 						<Ace
@@ -127,7 +138,7 @@ export default class SemanticEditMain extends Component {
 						/>
 					</div>
 					<div className="column">
-						<div dangerouslySetInnerHTML={this.createMarkup()}/>
+						<div dangerouslySetInnerHTML={this.createMarkup()} />
 					</div>
 				</div>
 				<Footer>
